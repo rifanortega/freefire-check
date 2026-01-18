@@ -1,0 +1,144 @@
+.stats-card {
+    padding: 25px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s;
+}
+
+.stats-card:hover {
+    transform: translateY(-5px);
+}
+
+.stats-card.empty-card {
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+}
+
+.stats-header {
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--card-border);
+    padding-bottom: 15px;
+}
+
+.stats-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mode-badge {
+    font-size: 0.7rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ccc;
+    padding: 2px 8px;
+    border-radius: 4px;
+}
+
+/* Main Grid */
+.stats-main-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.main-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.big-val {
+    font-size: 1.8rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.lbl {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+.highlight .big-val {
+    color: var(--primary);
+}
+
+.sub-lbl {
+    font-size: 0.75rem;
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+/* Advanced Grid */
+.adv-stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.adv-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.adv-item strong {
+    color: #fff;
+}
+
+.adv-item.full-width {
+    grid-column: span 2;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 5px 10px;
+    border-radius: 6px;
+    justify-content: space-between;
+}
+
+.lbl-row {
+    color: var(--text-muted);
+}
+
+.val-row {
+    color: #fff;
+    font-weight: 600;
+}
+
+.icon-red {
+    color: var(--secondary);
+}
+
+.icon-blue {
+    color: var(--primary);
+}
+
+.icon-green {
+    color: #00ff88;
+}
+
+.icon-yellow {
+    color: #ffcc00;
+}
+
+.icon-orange {
+    color: #ff9900;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--primary);
+    padding-left: 15px;
+    line-height: 1;
+}

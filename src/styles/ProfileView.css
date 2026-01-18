@@ -1,0 +1,231 @@
+.profile-view {
+    margin-bottom: 40px;
+}
+
+.profile-header {
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+    align-items: flex-start;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.profile-header::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: radial-gradient(circle at 100% 0%, rgba(0, 242, 234, 0.1) 0%, transparent 60%);
+    z-index: 0;
+}
+
+.profile-left {
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.avatar-container {
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+
+.avatar-circle {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    position: relative;
+    background: #1a1a2e;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lvl-badge {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--secondary);
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 12px;
+    z-index: 2;
+    border: 2px solid #1a1a2e;
+}
+
+.profile-content {
+    flex: 1;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profile-top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.profile-name {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.uid-tag {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-muted);
+    font-family: monospace;
+    display: flex;
+    align-items: center;
+}
+
+.profile-actions {
+    /* Placeholder for future buttons */
+}
+
+.profile-stats-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.p-stat {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.text-primary {
+    color: var(--primary);
+}
+
+.text-secondary {
+    color: var(--secondary);
+}
+
+.profile-tags {
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.tag {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 6px 14px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.clan-tag {
+    border-color: rgba(0, 242, 234, 0.3);
+    background: rgba(0, 242, 234, 0.05);
+    color: var(--primary);
+}
+
+.tag-label {
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    letter-spacing: 0.5px;
+}
+
+.tag-val {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.bio-section {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-style: italic;
+    color: #ccc;
+    font-family: monospace;
+}
+
+/* Extra Info Row */
+.extra-info-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.info-mini-card {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    text-align: center;
+}
+
+.mini-label {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+}
+
+.mini-val {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+    .profile-top-row {
+        justify-content: center;
+    }
+
+    .profile-name {
+        align-items: center;
+        font-size: 2rem;
+    }
+
+    .profile-stats-row {
+        justify-content: center;
+    }
+
+    .profile-tags {
+        justify-content: center;
+    }
+
+    .bio-section {
+        justify-content: center;
+    }
+}
